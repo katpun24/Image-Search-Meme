@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Expression Matcher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800">Meme Expression Matcher</h1>
+            <p class="text-gray-600 mt-2">Match your facial expression with memes in real-time!</p>
+        </header>
+
+        <main class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <div class="relative">
+                    <video id="video" class="w-full rounded-lg" autoplay muted></video>
+                    <canvas id="overlay" class="absolute top-0 left-0 w-full h-full"></canvas>
+                </div>
+                <div class="mt-4 flex justify-center">
+                    <button id="startCamera" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                        Start Camera
+                    </button>
+                </div>
+            </div>
+
+            <div id="results" class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Meme results will be displayed here -->
+            </div>
+
+            <div id="savedMemes" class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Saved Memes</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <!-- Saved memes will be displayed here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
